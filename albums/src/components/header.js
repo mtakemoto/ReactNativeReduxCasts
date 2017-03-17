@@ -1,11 +1,9 @@
-// Import libraries for making a component
+//Steps: import, create component, make available to other parts of app
 import React from 'react';
 import { Text, View } from 'react-native';
 
-// Make a component
 const Header = (props) => {
   const { textStyle, viewStyle } = styles;
-
   return (
     <View style={viewStyle}>
       <Text style={textStyle}>{props.headerText}</Text>
@@ -13,6 +11,7 @@ const Header = (props) => {
   );
 };
 
+//Shadow styles for iOS only
 const styles = {
   viewStyle: {
     backgroundColor: '#F8F8F8',
@@ -20,16 +19,15 @@ const styles = {
     alignItems: 'center',
     height: 60,
     paddingTop: 15,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
     elevation: 2,
-    position: 'relative'
+    position: 'relative',
+    shadowColor: '#003f87',
+    shadowOffset: { width: 0, height: 20 },
+    shadowOpacity: 0.2
   },
   textStyle: {
     fontSize: 20
   }
 };
 
-// Make the component available to other parts of the app
 export default Header;

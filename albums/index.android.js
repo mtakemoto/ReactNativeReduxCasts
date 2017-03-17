@@ -1,14 +1,17 @@
-// Index.ios.js - place code in here for IOS!!!!
+// Index.android.js
+// Import libray, create component, render to device
 
-// Import a library to help create a component
 import React from 'react';
 import { AppRegistry } from 'react-native';
 import Header from './src/components/header';
 
-// Create a component
+//First component, equivalent to
+
 const App = () => (
-  <Header />
+  <Header headerText={'Albums'} />
 );
 
-// Render it to the device
+
+//Render to device
+//Syntax: registerComponent('projectName', function components)
 AppRegistry.registerComponent('albums', () => App);
