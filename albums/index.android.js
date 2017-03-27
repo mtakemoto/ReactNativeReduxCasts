@@ -2,13 +2,18 @@
 // Import libray, create component, render to device
 
 import React from 'react';
-import { AppRegistry } from 'react-native';
-import Header from './src/components/header';
+import { AppRegistry, View } from 'react-native';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
 
 //First component, equivalent to
 
+//Cannot return 2 siblings.  Will only return the 1st
 const App = () => (
-  <Header headerText={'Albums'} />
+  <View>
+    <Header headerText={'Albums'} />
+    <AlbumList />
+  </View>
 );
 
 
